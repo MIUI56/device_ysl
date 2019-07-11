@@ -567,6 +567,12 @@ vendor/etc/camera/ysl_s5k3p8sp_sunny_ii_chromatix.xml
 vendor/etc/camera/ysl_s5k5e8_aux_ofilm_i_chromatix.xml
 vendor/etc/camera/ysl_s5k5e8_aux_sunny_ii_chromatix.xml
 
+# HotwordEnrollment
+-product/priv-app/HotwordEnrollmentXGoogleHEXAGON/HotwordEnrollmentXGoogleHEXAGON.apk;PRESIGNED
+-product/priv-app/HotwordEnrollmentOKGoogleHEXAGON/HotwordEnrollmentOKGoogleHEXAGON.apk;PRESIGNED
+
+
+
 # Camera HIDL - from Ysl PKQ1.181203.001/V10.3.2.0.PEFCNXM (HACK NEEDED)
 vendor/bin/hw/android.hardware.camera.provider@2.4-service
 vendor/lib/camera.device@1.0-impl.so

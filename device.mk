@@ -304,6 +304,12 @@ PRODUCT_PACKAGES += \
 PRODUCT_BOARD_PLATFORM := msm8996
 PRODUCT_USES_QCOM_HARDWARE := true
 
+# Hotword Enrollement
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/hotword-hiddenapi-package-whitelist.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/sysconfig/hotword-hiddenapi-package-whitelist.xml \
+    $(LOCAL_PATH)/configs/privapp-permissions-hotword.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-hotword.xml
+
+
 # Power
 PRODUCT_PACKAGES += \
    android.hardware.power@1.0-service \
