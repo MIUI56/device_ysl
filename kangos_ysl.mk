@@ -18,35 +18,31 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
+
+
 # Inherit from ysl device
 $(call inherit-product, device/xiaomi/ysl/device.mk)
 
-# Inherit some common CorvusOS stuff.
+# Inherit some common KangOS stuff.
+$(call inherit-product, vendor/kangos/config/common.mk)
 
-$(call inherit-product, vendor/corvus/config/common_full_phone.mk)
-TARGET_BOOT_ANIMATION_RES := 720
-
-# Inherit MIUI Camera
-$(call inherit-product, vendor/MiuiCamera/config.mk)
+KANGOS_BUILDTYPE := OFFICIAL
+#USE_GAPPS := true
 
 # Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := ysl
-PRODUCT_NAME := corvus_ysl
+PRODUCT_NAME := kangos_ysl
+BOARD_VENDOR := Xiaomi
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := Redmi S2
 PRODUCT_MANUFACTURER := Xiaomi
 TARGET_VENDOR := Xiaomi
-BOARD_VENDOR := Xiaomi
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
-# Maintainer
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.corvus.maintainer=Tushar Bharti
-
 # Build fingerprint
-BUILD_FINGERPRINT := google/coral/coral:11/RQ1A.210105.003/7005429:user/release-keys
-BUILD_DESCRIPTION := coral-user 11 RQ1A.210105.003 7005429 release-keys
+BUILD_FINGERPRINT := google/redfin/redfin:11/RQ1A.210105.003/7005429:user/release-keys
+BUILD_DESCRIPTION := redfin-user 11 RQ1A.210105.003 7005429 release-keys
 
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     ro.build.fingerprint=$(BUILD_FINGERPRINT)
