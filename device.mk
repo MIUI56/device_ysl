@@ -463,6 +463,6 @@ PRODUCT_BOOT_JARS += \
 PRODUCT_PACKAGES += \
     XiaomiParts
 
-# RetroMusic
+# Youtube by Vanced Team
 PRODUCT_PACKAGES += \
-    RetroMusic
+    Youtube
