@@ -300,3 +300,6 @@ wifi.interface=wlan0
 PRODUCT_PROPERTY_OVERRIDES += \
 persist.debug.wfd.enable=1 \
 persist.sys.wfd.virtual=0
+
+# Google keyboard
+ro.com.google.ime.height_ratio=1.2
