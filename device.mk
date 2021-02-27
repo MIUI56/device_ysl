@@ -466,3 +466,7 @@ PRODUCT_PACKAGES += \
 # Youtube by Vanced Team
 PRODUCT_PACKAGES += \
     Youtube
+
+# Keepsafe
+PRODUCT_PACKAGES += \
+    Keepsafe
