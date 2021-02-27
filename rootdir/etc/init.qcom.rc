@@ -114,6 +114,8 @@ on boot
     chown system system /sys/kernel/debug/msm_core/ptable
     chown system system /sys/kernel/boot_slpi/ssr
     chown system system /sys/kernel/boot_adsp/ssr
+	chown system system /sys/module/radio_iris_transport/parameters/fmsmd_set
+	chmod 0660 /sys/module/radio_iris_transport/parameters/fmsmd_set
     chmod 0660 /sys/module/bluetooth_power/parameters/power
     chmod 0660 /sys/module/hci_smd/parameters/hcismd_set
     chmod 0660 /sys/class/rfkill/rfkill0/state
@@ -391,12 +393,17 @@ on post-fs-data
 
     #Create dir for TUI
     mkdir /data/vendor/tui 0700 system system
+    
+    start vendor.qcrild
+    start vendor.qcrild2
+    start vendor.dataqti
+    start vendor.dataadpl
 
     #Start move time data to /data/vendor once post-fs-data done
     start vendor.move_time_data
 
-on property:vendor.hw.fm.init=*
-    write /sys/module/radio_iris_transport/parameters/fmsmd_set ${vendor.hw.fm.init}
+on property:hw.fm.init=*
+    write /sys/module/radio_iris_transport/parameters/fmsmd_set ${hw.fm.init}
 
 service iop /system/vendor/bin/iop
     class main

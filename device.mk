@@ -173,10 +173,15 @@ PRODUCT_PACKAGES += \
     memtrack.msm8953 \
     libdisplayconfig \
     liboverlay \
+	 libqdMetaData \
+    libqdMetaData.vendor \
     libqdMetaData.system \
     libgenlock \
     libtinyxml \
-    libvulkan 
+    libstagefright_enc_common \
+    libvulkan \
+    vendor.display.config@2.0 \
+    vendor.display.config@2.0.vendor
 
 # Doze mode
 PRODUCT_PACKAGES += \
@@ -196,9 +201,8 @@ PRODUCT_PACKAGES += \
 
 # FM
 PRODUCT_PACKAGES += \
-    FM2 \
-    libqcomfm_jni \
-    qcom.fmradio
+    FMRadio \
+    libfmjni
 
 # GPS
 PRODUCT_PACKAGES += \
@@ -462,16 +466,3 @@ PRODUCT_PACKAGES += \
 # RetroMusic
 PRODUCT_PACKAGES += \
     RetroMusic
-
-#HALS
-SRC_AUDIO_HAL_DIR := hardware/qcom-caf/msm8996/audio
-SRC_DISPLAY_HAL_DIR := hardware/qcom-caf/msm8996/display
-SRC_MEDIA_HAL_DIR := hardware/qcom-caf/msm8996/media
-
-
-# Soong namespaces
-PRODUCT_SOONG_NAMESPACES += \
-    $(LOCAL_PATH) \
-    hardware/qcom-caf/msm8996/video \
-    hardware/qcom-caf/msm8996/audio \
-    hardware/qcom-caf/msm8996/media
