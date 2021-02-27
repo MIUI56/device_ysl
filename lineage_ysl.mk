@@ -23,24 +23,13 @@ $(call inherit-product, device/xiaomi/ysl/device.mk)
 
 # Inherit some common CorvusOS stuff.
 
-
-$(call inherit-product, vendor/kangos/config/common.mk)
-
+$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 TARGET_BOOT_ANIMATION_RES := 720
-
-KANGOS_BUILDTYPE := OFFICIAL
-TARGET_FACE_UNLOCK_SUPPORTED := true
-
-USE_GAPPS := true
-
-PRODUCT_PRODUCT_PROPERTIES += \
-  ro.kangos.maintainer=AYUSH_AJ \
-  ro.kangos.cpu=msm8953
 
 
 # Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := ysl
-PRODUCT_NAME := kangos_ysl
+PRODUCT_NAME := lineage_ysl
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := Redmi S2
 PRODUCT_MANUFACTURER := Xiaomi
@@ -49,7 +38,9 @@ BOARD_VENDOR := Xiaomi
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
-
+# Maintainer
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.corvus.maintainer=Tushar Bharti
 
 # Build fingerprint
 BUILD_FINGERPRINT := google/redfin/redfin:11/RQ1A.210205.004/7038034:user/release-keys

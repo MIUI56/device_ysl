@@ -427,6 +427,11 @@
          carrier provisioning. If false: hard disabled. If true: then depends on carrier
          provisioning, availability etc -->
     <bool name="config_carrier_volte_available">true</bool>
+    
+    <!-- Flag specifying whether VT should be available for carrier: independent of
+          carrier provisioning. If false: hard disabled. If true: then depends on carrier
+          provisioning, availability etc -->
+    <bool name="config_carrier_vt_available">true</bool>
 
     <!-- Flag specifying whether VT is available on device -->
     <bool name="config_device_vt_available">true</bool>
@@ -518,6 +523,11 @@
 
     <!-- Flag specifying whether WFC over IMS is available on device -->
     <bool name="config_device_wfc_ims_available">true</bool>
+    
+    <!-- Flag specifying whether WFC over IMS should be available for carrier: independent of
+         carrier provisioning. If false: hard disabled. If true: then depends on carrier
+         provisioning, availability etc -->
+    <bool name="config_carrier_wfc_ims_available">true</bool>
 	
     <!-- Configuration to enable non-default PDP during IWLAN -->
     <bool name="config_feature_iwlan_enabled">true</bool>
@@ -673,6 +683,14 @@
     <string name="config_performance_profile" translatable="false">3</string>
     <string name="config_powersave_profile" translatable="false">2</string>
     <string name="config_screen_off_profile" translatable="false">2</string>
+    
+    <!-- List of biometric sensors on the device, in decreasing strength. Consumed by AuthService
+         when registering authenticators with BiometricService. Format must be ID:Modality:Strength,
+         where: IDs are unique per device, Modality as defined in BiometricAuthenticator.java,
+         and Strength as defined in Authenticators.java -->
+    <string-array name="config_biometric_sensors" translatable="false" >
+        <item>0:2:15</item> <!-- ID0:Fingerprint:Strong -->
+    </string-array>
 
     <!-- The component name, flattened to a string, for the default autofill service
          to  enabled for an user. This service must be trusted, as it can be activated

@@ -14,9 +14,9 @@
 # limitations under the License.
 
 PRODUCT_MAKEFILES := \
-     $(LOCAL_DIR)/kangos_ysl.mk
+     $(LOCAL_DIR)/lineage_ysl.mk
 
 COMMON_LUNCH_CHOICES := \
-kangos_ysl-user \
-kangos_ysl-userdebug \
-kangos_ysl-eng	
+lineage_ysl-user \
+lineage_ysl-userdebug \
+lineage_ysl-eng	
