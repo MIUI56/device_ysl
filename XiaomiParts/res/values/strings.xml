@@ -13,7 +13,7 @@
 
     <!-- Torch Brightness -->
     <string name="torch_brightness_title">Brightness</string>
-    <string name="torch_title">Torch</string>
+    
 
     <!-- FPS Info -->
     <string name="fps_info_title">FPS Info Overlay</string>
