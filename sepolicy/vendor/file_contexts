@@ -77,3 +77,7 @@
 /sys/class/leds/vibrator/vmax_mv_user                u:object_r:sysfs_vibrator:s0
 /sys/class/leds/vibrator/vmax_mv_call                u:object_r:sysfs_vibrator:s0
 /sys/class/leds/vibrator/vmax_mv_strong              u:object_r:sysfs_vibrator:s0
+
+# Torch brightness control
+/sys/devices/soc/soc:qcom,camera-flash/driver/soc:qcom,camera-flash/leds/torch-light0/max_brightness	u:object_r:sysfs_tbrightness:s0
+/sys/devices/soc/soc:qcom,camera-flash/driver/soc:qcom,camera-flash/leds/torch-light1/max_brightness	u:object_r:sysfs_tbrightness:s0

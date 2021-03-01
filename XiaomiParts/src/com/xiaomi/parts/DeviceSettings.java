@@ -59,6 +59,7 @@ public class DeviceSettings extends PreferenceFragment implements
 	private SecureSettingListPreference mSPECTRUM;
 
 	private SecureSettingSwitchPreference mFastcharge;
+        private CustomSeekBarPreference mTorchBrightness;
 
     //public static final String PREF_TORCH_BRIGHTNESS = "torch_brightness";
     //private static final String TORCH_1_BRIGHTNESS_PATH = "/sys/devices/soc/800f000.qcom," +
